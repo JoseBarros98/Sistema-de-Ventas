@@ -26,7 +26,7 @@ class CategoriaController extends Controller
             ->where('condicion','=','1')
             ->orderBy('idcategoria','desc')
             ->paginate(7);
-            return view('almacen.categira.index',["categorias"=>$categorias,"searchText"=>$query]);
+            return view('almacen.categoria.index',["categorias"=>$categorias,"searchText"=>$query]);
         }
         
     }
@@ -38,7 +38,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        return viwe("almacen.categoria.create");
+        return view("almacen.categoria.create");
     }
 
     /**
