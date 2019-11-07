@@ -45,8 +45,8 @@ class ArticuloController extends Controller
         $articulo->descripcion=$request->get('descripcion');
         $articulo->estado='Activo';
 
-        if (Input::hasFile('imagen')){
-         $files=Input::file('imagen');
+        if ($request->hasFile('imagen')){
+         $files=$request->file('imagen');
          $files->move(public_path().'/imagenes/articulos/',$files->getClientOriginalName());
             $articulo->imagen=$files->getClientOriginalName();
         }
@@ -77,8 +77,8 @@ class ArticuloController extends Controller
         $articulo->descripcion=$request->get('descripcion');
        // $articulo->estado='Activo';
 
-        if (Input::hasFile('imagen')){
-         $files=Input::file('imagen');
+        if ($request->hasFile('imagen')){
+         $files=$request->file('imagen');
          $files->move(public_path().'/imagenes/articulos/',$files->getClientOriginalName());
          $articulo->imagen=$files->getClientOriginalName();
         }
