@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request; 
 use App\Categoria;
 use Illuminate\Support\Facades\Redirect;
-use App\Http\Request\CategoriaFormRequest;
+use App\Http\Requests\CategoriaFormRequest;
 use DB;
 
 class CategoriaController extends Controller
