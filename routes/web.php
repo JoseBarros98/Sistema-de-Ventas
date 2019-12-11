@@ -28,3 +28,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
 Route::get('/{slug?}', 'HomeController@index');
+
+Route::get('/redirect/{provider}','SocialController@redirect');
+Route::get('/callback/{provider}','SocialController@callback');

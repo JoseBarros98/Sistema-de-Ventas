@@ -1,0 +1,48 @@
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);/**$facebook-color: #3b5998;
+$twitter-color: #1da1f2;
+$google-color: #ea4335;
+$github-color: #000000;
+
+.btn-facebook, .btn-github, .btn-google, .btn-twitter{
+
+    color: white;
+    &:hover, &:active, &:focus{
+        color: white;
+    }
+
+}
+
+.btn-facebook{
+
+    background-color: $facebook-color;
+    border-color: darken($facebook-color, 3%);
+
+}
+
+
+
+.btn-twitter{
+
+    background-color: $twitter-color;
+    border-color: darken($twitter-color, 3%);
+
+}
+
+
+
+.btn-google{
+
+    background-color: $goolge-color;
+    border-color: darken($google-color, 3%);
+
+}
+
+
+
+.btn-github{
+
+    background-color: $github-color;
+    border-color: darken($github-color, 3%);
+
+}**/
+

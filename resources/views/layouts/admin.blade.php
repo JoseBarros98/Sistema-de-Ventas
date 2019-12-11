@@ -48,14 +48,14 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <small class="bg-red">Online</small>
-                  <span class="hidden-xs" name="name">Jose Rodolfo Barros Rojas</span>
+                  <span class="hidden-xs" name="name"></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
                     
                     <p>
-                      www.uajms.edu.bo <br> Ingenieria Informatica
+                      Ingenieria Informatica
                       <small>Proyecto Programacion en Red</small>
                     </p>
                   </li>
@@ -64,7 +64,7 @@
                   <li class="user-footer">
                     
                     <div class="pull-right">
-                      <a href="{{url('logout')}}" class="btn btn-default btn-flat">Cerrar</a>
+                      <a href="{{url('logout')}}" class="btn btn-default btn-flat">Cerrar Sesion</a>
                     </div>
                   </li>
                 </ul>
@@ -133,13 +133,13 @@
              <li>
               <a href="#">
                 <i class="fa fa-plus-square"></i> <span>Ayuda</span>
-                <small class="label pull-right bg-red">PDF</small>
+                <small class="label pull-right bg-red"></small>
               </a>
             </li>
             <li>
               <a href="#">
-                <i class="fa fa-info-circle"></i> <span>Acerca De...</span>
-                <small class="label pull-right bg-yellow">IT</small>
+                <i class="fa fa-info-circle"></i> <span>Contactanos</span>
+                <small class="label pull-right bg-yellow"></small>
               </a>
             </li>
                         

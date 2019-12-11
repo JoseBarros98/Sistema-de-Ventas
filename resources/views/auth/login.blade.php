@@ -64,18 +64,22 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="">
+                        
                             <div class="panel-footer">
-                                <a href="" class="btn btn-facebook"> Login con Facebook</a>
+                                <a href="redirect/facebook" class="btn btn-facebook">
+                                    <i class="fa fa-facebook"></i>
+                                    Login con Facebook
+                                </a>
+
+                                <a href="redirect/github" class="btn btn-github">
+                                    <i class="fa fa-github"></i>
+                                    Login con GitHub
+                                </a>
+
                             </div>
                         
-                        </div>
-                        <div class="">
-                            <div class="panel-footer">
-                                <a href="" class="btn btn-github"> Login con Github</a>
-                            </div>
                         
-                        </div>
+                        
                     </form>
                 </div>
             </div>

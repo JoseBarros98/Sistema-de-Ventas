@@ -108,7 +108,7 @@
       <th></th>
       <th></th>
       <th></th>
-      <th><h4 id="total">S./ 0.00</h4><input type="hidden" name="total_venta" id="total_venta"></th>
+      <th><h4 id="total">Bs./ 0.00</h4><input type="hidden" name="total_venta" id="total_venta"></th>
      </tfoot>
      <tbody>
 
@@ -169,7 +169,7 @@ function agregar()
    var fila='<tr class="selected" id="fila'+cont+'"><td><button type="button" class="btn btn-warning" onclick="eliminar('+cont+');">X</button></td><td><input type="hidden" name="idarticulo[]" value="'+idarticulo+'">'+articulo+'</td><td><input type="number" name="cantidad[]" value="'+cantidad+'"></td><td><input type="number" name="precio_venta[]" value="'+precio_venta+'"></td><td><input type="number" name="descuento[]" value="'+descuento+'"></td><td>'+subtotal[cont]+'</td></tr>';
    cont++;
    limpiar();
-   $("#total").html("S./ " + total);
+   $("#total").html("Bs./ " + total);
    $("#total_venta").val(total);
    evaluar();
    $('#detalles').append(fila);
