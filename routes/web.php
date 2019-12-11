@@ -22,6 +22,9 @@ Route::resource('compras/ingreso','IngresoController');
 Route::resource('ventas/venta','VentaController');
 Route::resource('seguridad/usuario','UsuarioController');
 
+Route::view('/contacto', 'contacto')->name('contacto');
+Route::post('contacto', 'MessagesController@store')->name('Messages.store');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
