@@ -13,6 +13,14 @@
                         </div>
                     @endif
 
+                    @include('sweetalert::alert')
+
+                    @if(session('success_message'))
+    <div class="alert alert-success">
+      {{ session('success_message')}}
+      </div>
+  @endif 
+
                 {!!Form::open(array('url'=>'seguridad/usuario','method'=>'POST','autocomplete'=>'off'))!!}
                     {{Form::token()}}
                     <div class="form-group row">

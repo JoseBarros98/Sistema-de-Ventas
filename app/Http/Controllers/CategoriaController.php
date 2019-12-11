@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Categoria;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\CategoriaFormRequest;
+use RealRashid\SweetAlert\Facades\Alert;
 use DB;
 
 class CategoriaController extends Controller
@@ -55,7 +56,8 @@ class CategoriaController extends Controller
         $categoria->descripcion=$request->get('descripcion');
         $categoria->condicion='1';
         $categoria->save();
-        return Redirect::to('almacen/categoria');
+        //return Redirect::to('almacen/categoria');
+        return redirect('almacen/categoria')->with('toast_success','Categoria Creada ');
     }
 
     /**

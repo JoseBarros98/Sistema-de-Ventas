@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
 use App\Http\Requests\VentaFormRequest;
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Venta;
 use App\DetalleVenta;
 use DB;
@@ -93,7 +94,8 @@ class VentaController extends Controller
            DB::rollback();
         }
 
-        return Redirect::to('ventas/venta');
+        //return Redirect::to('ventas/venta');
+        return redirect('ventas/venta')->with('toast_success','Venta Realizada');
     }
 
     public function show($id)

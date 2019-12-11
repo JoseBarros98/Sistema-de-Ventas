@@ -6,7 +6,7 @@ namespace App\Http\Controllers;
 use App\Mail\MessageReceived; 
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
-
+use RealRashid\SweetAlert\Facades\Alert;
 
 class MessagesController extends Controller
 {
@@ -24,6 +24,6 @@ class MessagesController extends Controller
             
 
       // $alert= Alert::success('Mensaje Enviado','Te responderemos algun dia');
-     return 'Mensaje Enviado';  //redirect('/contacto')->with('toast_success','Mensaje Enviado ');
+     return redirect('/contacto')->with('toast_success','Mensaje Enviado ');
     }
 }

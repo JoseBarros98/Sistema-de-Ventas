@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
 use App\Http\Requests\IngresoFormRequest;
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Ingreso;
 use App\DetalleIngreso;
 use DB;
@@ -88,7 +89,8 @@ class IngresoController extends Controller
           DB::rollback();
        }
 
-       return Redirect::to('compras/ingreso');
+       //return Redirect::to('compras/ingreso');
+       return redirect('compras/ingreso')->with('toast_success','Nuevo Ingreso Aceptado');
    }
 
    public function show($id)

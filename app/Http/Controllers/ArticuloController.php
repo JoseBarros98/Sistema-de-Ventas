@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Input;
 use App\Http\Requests\ArticuloFormRequest;
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Articulo;
 use DB;
 
@@ -51,7 +52,9 @@ class ArticuloController extends Controller
             $articulo->imagen=$files->getClientOriginalName();
         }
         $articulo->save();
-        return Redirect::to('almacen/articulo');
+        //return Redirect::to('almacen/articulo');
+        return redirect('almacen/articulo')->with('toast_success','Nuevo Articulo Agregado');
+
 
     }
     public function show($id)

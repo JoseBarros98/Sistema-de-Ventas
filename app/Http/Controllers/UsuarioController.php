@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\UsuarioFormRequest;
+use RealRashid\SweetAlert\Facades\Alert;
 use DB;
 
 class UsuarioController extends Controller
@@ -38,7 +39,8 @@ class UsuarioController extends Controller
         $usuario->email=$request->get('email');
         $usuario->password=bcrypt($request->get('password'));
         $usuario->save();
-        return Redirect::to('seguridad/usuario');
+        //return Redirect::to('seguridad/usuario');
+        return redirect('seguridad/usuario')->with('toast_success','Nuevo Usuario Agregado');
     }
     public function edit($id)
     {

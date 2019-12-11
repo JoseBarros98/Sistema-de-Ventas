@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Persona;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\PersonaFormRequest;
+use RealRashid\SweetAlert\Facades\Alert;
 use DB; 
 
 class ProveedorController extends Controller
@@ -63,6 +64,7 @@ class ProveedorController extends Controller
         $persona->email=$request->get('request');
         $persona->save();
         return Redirect::to('compras/proveedor');
+        return redirect('compras/proveedor')->with('toast_success','Nuevo Proveedor Agregado');
     }
 
     /**

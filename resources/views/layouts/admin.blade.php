@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ventas</title>
@@ -21,6 +22,9 @@
 
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
+
+<!-- Sweet alert-->
+  
     <div class="wrapper">
 
       <header class="main-header">
@@ -176,6 +180,7 @@
 	                  	<div class="col-md-12">
 		                          <!--Contenido-->
                                     @yield('contenido')
+                                    @include('sweetalert::alert')
 		                          <!--Fin Contenido-->
                            </div>
                         </div>
@@ -191,7 +196,7 @@
       </div><!-- /.content-wrapper -->
       <!--Fin-Contenido-->
       
-
+    
       
     <!-- jQuery 2.1.4 -->
     <script src="{{ asset('js/jQuery-2.1.4.min.js') }}"></script>
