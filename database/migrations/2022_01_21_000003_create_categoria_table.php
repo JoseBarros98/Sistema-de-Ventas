@@ -4,17 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateCategoriaTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $tableName = 'users';
+    public $tableName = 'categoria';
 
     /**
      * Run the migrations.
-     * @table users
+     * @table categoria
      *
      * @return void
      */
@@ -22,15 +22,10 @@ class CreateUsersTable extends Migration
     {
         Schema::create($this->tableName, function (Blueprint $table) {
             
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('email');
-            $table->timestamp('email_verified_at')->nullable()->default(null);
-            $table->string('password');
-            $table->rememberToken();
-
-            $table->unique(["email"], 'users_email_unique');
-            $table->nullableTimestamps();
+            $table->increments('idcategoria');
+            $table->string('nombre', 50);
+            $table->string('descripcion')->nullable()->default(null);
+            $table->tinyInteger('condicion');
         });
     }
 
