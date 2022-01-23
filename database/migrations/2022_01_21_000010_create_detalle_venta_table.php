@@ -23,8 +23,8 @@ class CreateDetalleVentaTable extends Migration
         Schema::create($this->tableName, function (Blueprint $table) {
             
             $table->increments('iddetalle_venta');
-            $table->integer("idventa", )->unsigned();
-            $table->integer("idarticulo", )->unsigned();
+            $table->integer("idventa" )->unsigned();
+            $table->integer("idarticulo" )->unsigned();
             $table->integer('cantidad');
             $table->decimal('precio_venta', 11, 2);
             $table->decimal('descuento', 11, 2);

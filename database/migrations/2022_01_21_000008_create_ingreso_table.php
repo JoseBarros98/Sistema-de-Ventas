@@ -23,7 +23,7 @@ class CreateIngresoTable extends Migration
         Schema::create($this->tableName, function (Blueprint $table) {
             
             $table->increments('idingreso');
-            $table->integer("idproveedor",)->unsigned();
+            $table->integer("idproveedor")->unsigned();
             $table->string('tipo_comprobante', 20);
             $table->string('serie_comprobante', 7)->nullable()->default(null);
             $table->string('num_comprobante', 10);

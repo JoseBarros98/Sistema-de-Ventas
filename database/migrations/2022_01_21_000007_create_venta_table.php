@@ -30,7 +30,7 @@ class CreateVentaTable extends Migration
             $table->decimal('impuesto', 4, 2);
             $table->decimal('total_venta', 11, 2);
             $table->string('estado', 20);
-            $table->integer("idcliente",)->unsigned();
+            $table->integer("idcliente")->unsigned();
             $table->foreign('idcliente')
                 ->references('idpersona')->on('persona')
                 ->onDelete('restrict')

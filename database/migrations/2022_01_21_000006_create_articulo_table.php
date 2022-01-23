@@ -30,7 +30,7 @@ class CreateArticuloTable extends Migration
             $table->string('imagen', 50)->nullable()->default(null);
             $table->string('estado', 20);
 
-            $table->integer("idcategoria",)->unsigned();
+            $table->integer("idcategoria")->unsigned();
 
 
             $table->foreign('idcategoria')
