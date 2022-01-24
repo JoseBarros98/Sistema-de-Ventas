@@ -20,7 +20,7 @@ class CreatePersonaTable extends Migration
      */
     public function up()
     {
-        Schema::create($this->tableName, function (Blueprint $table) {
+        Schema::create('persona', function (Blueprint $table) {
             
             $table->increments('idpersona');
             $table->string('tipo_persona', 20);
@@ -30,6 +30,13 @@ class CreatePersonaTable extends Migration
             $table->string('direccion', 70)->nullable()->default(null);
             $table->string('telefono', 15)->nullable()->default(null);
             $table->string('email', 250)->nullable()->default(null);
+
+            $table->integer('gener')->unsigned();
+            $table->foreign('gener')->references('id')->on('generos');
+            
+            $table->integer('pais')->unsigned();
+            $table->foreign('pais')->references('id')->on('nacionalidads');
+                
         });
     }
 
@@ -40,6 +47,6 @@ class CreatePersonaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists($this->tableName);
+        Schema::dropIfExists('persona');
     }
 }

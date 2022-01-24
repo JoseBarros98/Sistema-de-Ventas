@@ -10,7 +10,6 @@ class Persona extends Model
 
     protected $primaryKey='idpersona';
 
-    public $timestamps=false;
 
     protected $fillable=[
         'tipo_persona',
@@ -19,7 +18,9 @@ class Persona extends Model
         'num_documento',
         'direccion',
         'telefono',
-        'email'
+        'email',
+        'pais',
+        'gener',
 
     ];
 
