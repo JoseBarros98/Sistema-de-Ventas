@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-8 col.xs.12">
             <h3>Listado de Empresas <a href="empresa/create"><button class="btn btn-success">Nuevo</button></a></h3>
-            @include('empresas.search')
+            @include('empresas.empresa.search')
         </div>
     </div>
     <div class="row">
@@ -18,19 +18,29 @@
                         <th>Acciones</th>
                         
                     </thead>
-                    @foreach( $enterprises as $ent)
+                    
+                    @forelse( $enterprises as $ent)
                     <tr>
                         <td>{{ $ent->nombre}}</td>
                         <td>{{ $ent->nit}}</td>
                         <td>{{ $ent->telefono}}</td>
-                        <td>{{ $ent->pais }}</td>
+                        
+                        @foreach($nacionalidads as $nac)
+                            @if($ent->pais == $nac->id)
+                                <td>{{ $nac->pais }}</td>
+                            @endif
+                        @endforeach
+                        
                         <td>
                             <a href="{{URL::action('EnterpriseController@edit',$ent->id)}}"><button class="btn btn-info">Editar</button></a>
                             <a href="" data-target="#modal-delete-{{$ent->id}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
                         </td>
+                       
+                        @include('empresas.empresa.modal')
+                        @empty
+                        @endforelse
                     </tr>
-                    @include('empresas.modal')
-                    @endforeach
+                    
                 </table>
             </div>
             {{$enterprises->render()}}

@@ -11,6 +11,7 @@ class Nacionalidad extends Model
     protected $primaryKey='id';
 
     protected $fillable=[
+        'id',
         'pais',
     ];
     protected $guarded=[];

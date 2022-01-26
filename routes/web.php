@@ -22,7 +22,7 @@ Route::resource('compras/proveedor','ProveedorController');
 Route::resource('compras/ingreso','IngresoController');
 Route::resource('ventas/venta','VentaController');
 Route::resource('seguridad/usuario','UsuarioController');
-Route::resource('empresa','EnterpriseController');
+Route::resource('empresas/empresa','EnterpriseController');
 
 Route::view('/contacto', 'contacto')->name('contacto');
 Route::post('contacto', 'MessagesController@store')->name('Messages.store');

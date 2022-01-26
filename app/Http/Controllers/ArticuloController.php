@@ -47,8 +47,8 @@ class ArticuloController extends Controller
         $articulo->estado='Activo';
 
         if ($request->hasFile('imagen')){
-         $files=$request->file('imagen');
-         $files->move(public_path().'/imagenes/articulos/',$files->getClientOriginalName());
+        $files=$request->file('imagen');
+        $files->move(public_path().'/imagenes/articulos/',$files->getClientOriginalName());
             $articulo->imagen=$files->getClientOriginalName();
         }
         $articulo->save();
