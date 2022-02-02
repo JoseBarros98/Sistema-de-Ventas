@@ -30,12 +30,7 @@ class CreatePersonaTable extends Migration
             $table->string('direccion', 70)->nullable()->default(null);
             $table->string('telefono', 15)->nullable()->default(null);
             $table->string('email', 250)->nullable()->default(null);
-
-            $table->integer('gener')->unsigned();
-            $table->foreign('gener')->references('id')->on('generos');
-            
-            $table->integer('pais')->unsigned();
-            $table->foreign('pais')->references('id')->on('nacionalidads');
+            $table->timestamps();
                 
         });
     }

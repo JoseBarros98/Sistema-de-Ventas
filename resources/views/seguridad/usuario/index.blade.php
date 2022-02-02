@@ -13,14 +13,14 @@
                     <thead>
                         <th>Id</th>
                         <th>Nombre</th>
-                        <th>Email</th>
+                        <th>Nombre de usuario</th>
                         <th>Opciones</th>
                     </thead>
                     @foreach( $usuarios as $usu)
                     <tr>
                         <td>{{ $usu->id}}</td>
                         <td>{{ $usu->name}}</td>
-                        <td>{{ $usu->email}}</td>
+                        <td>{{ $usu->username}}</td>
                         <td>
                             <a href="{{URL::action('UsuarioController@edit',$usu->id)}}"><button class="btn btn-info">Editar</button></a>
                             <a href="" data-target="#modal-delete-{{$usu->id}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>

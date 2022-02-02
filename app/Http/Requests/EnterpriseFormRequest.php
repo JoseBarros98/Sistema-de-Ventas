@@ -27,7 +27,7 @@ class EnterpriseFormRequest extends FormRequest
             'nombre'=>'required',
             'pais'=>'required',
             'nit'=>'required',
-            'telefono'=>'nullable',
+            'telefono'=>'required',
             
         ];
     }

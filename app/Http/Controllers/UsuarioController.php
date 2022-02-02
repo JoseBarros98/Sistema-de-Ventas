@@ -36,7 +36,7 @@ class UsuarioController extends Controller
     {
         $usuario=new User;
         $usuario->name=$request->get('name');
-        $usuario->email=$request->get('email');
+        $usuario->username=$request->get('username');
         $usuario->password=bcrypt($request->get('password'));
         $usuario->save();
         //return Redirect::to('seguridad/usuario');
@@ -50,7 +50,7 @@ class UsuarioController extends Controller
     {
         $usuario=User::findOrFail($id);
         $usuario->name=$request->get('name');
-        $usuario->email=$request->get('email');
+        $usuario->username=$request->get('username');
         $usuario->password=bcrypt($request->get('password'));
         $usuario->update();
         return Redirect::to('seguridad/usuario');

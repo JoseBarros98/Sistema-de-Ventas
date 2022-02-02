@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Enterprise;
+
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Input;
+use App\Http\Requests\EnterpriseFormRequest;
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Nacionalidad;
 use DB;
 
@@ -77,27 +82,29 @@ class EnterpriseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Enterprise $enterprises)
+    public function edit($id)
     {
-        $nacionalidads=Nacionalidad::get();
-        $route=route("enterprises.update",["enterprises"=>$enterprises]);
-        return view("empresas.empresa.edit", compact("nacionalidads", "route"));
+        $enterprises=Enterprise::findOrFail($id);
+        $nacionalidads=DB::table('nacionalidads')->get();
+        return view("empresas.empresa.edit",["enterprises"=>$enterprises,"nacionalidads"=>$nacionalidads]);
+
+        /*$nacionalidads=Nacionalidad::get();
+        $route=route("enterprises.update", ["enterprise"=>$enterprise]);
+        return view("empresas.empresa.edit", compact("enterprise", "nacionalidads","route"));*/
+    
     }
 
 
-    public function update(Request $request, Enterprise $enterprises)
+    public function update(EnterpriseFormRequest $request, $id)
     {
-        $this->validate($request,[
-            "nombre"=>"required",
-            "nit"=>"required|max:90",
-            "pais"=>"required|max:140",
-            "telefono"=>"required",
-            
+        $enterprises=Enterprise::findOrFail($id);
 
-        ]);
-        $enterprises->fill($request->only("nombre","nit","pais","telefono"))->save();
-        return back('empresas/empresa')
-        ->with('toast_success','Nueva Empresa Modificada');
+        $enterprises->nombre=$request->get('nombre');
+        $enterprises->pais=$request->get('pais');
+        $enterprises->nit=$request->get('nit');
+        $enterprises->telefono=$request->get('telefono');
+        $enterprises->update();
+        return redirect('empresas/empresa');
 
         
     }
@@ -110,6 +117,9 @@ class EnterpriseController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $enterprise=Enterprise::findOrFail($id);
+        $enterprise->delete();
+        return redirect('empresas/empresa');
+    
     }
 }
