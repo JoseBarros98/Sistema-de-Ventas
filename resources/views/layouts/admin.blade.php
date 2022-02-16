@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ventas</title>
+    <title>JhonnySport</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -17,8 +17,9 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{ asset('css/_all-skins.min.css') }}">
-    <link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png') }}">
-    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
+   
+    <link rel="shortcut icon" type="image/png" href="{{ asset('/img/izi.png') }}">
+    <link rel="shortcut icon" sizes="192x192" href="{{ asset('/img/izi.png') }}">
 
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
@@ -30,9 +31,9 @@
       <header class="main-header">
 
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="http://sistema-de-ventas.test/" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>:</b>V</span>
+          <span class="logo-mini"><b>J</b>S</span>
           <!-- logo for regular state and mobile devices -->
           <span class="logo-lg"><b>Ventas</b></span>
         </a>
@@ -59,8 +60,8 @@
                   <li class="user-header">
                     
                     <p>
-                      Ingenieria Informatica
-                      <small>Proyecto Programacion en Red</small>
+                      JhonnySport
+                      <small>Sistema de Ventas</small>
                     </p>
                   </li>
                   
@@ -116,7 +117,7 @@
               <a href="#">
                 <i class="fa fa-th"></i>
                 <span>Compras</span>
-                 <i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
                 <li><a href="{{ url('compras/ingreso') }}"><i class="fa fa-circle-o"></i> Ingresos</a></li>
@@ -145,17 +146,16 @@
                 
               </ul>
             </li>
-             <li>
+
+            <li class="treeview">
               <a href="#">
-                <i class="fa fa-plus-square"></i> <span>Ayuda</span>
-                <small class="label pull-right bg-red"></small>
+                <i class="fa fa-calendar"></i>
+                <span>Pedidos</span>
+                <i class="fa fa-angle-left pull-right"></i>
               </a>
-            </li>
-            <li>
-              <a href="/contacto">
-                <i class="fa fa-info-circle"></i> <span>Contactanos</span>
-                <small class="label pull-right bg-yellow"></small>
-              </a>
+              <ul class="treeview-menu">
+                <li><a href="{{ url('pedidos/pedido') }}"><i class="fa fa-circle-o"></i> Pedidos</a></li>
+              </ul>
             </li>
                         
           </ul>

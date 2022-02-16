@@ -20,7 +20,7 @@ class VentaController extends Controller
 {
     public function __construct()
     {
-      // $this->middleware('auth');
+        $this->middleware('auth');
     }
     public function index(Request $request)
     {
@@ -30,10 +30,10 @@ class VentaController extends Controller
            $ventas=DB::table('venta as v')
             ->join('persona as p','v.idcliente','=','p.idpersona')
             ->join('detalle_venta as dv','v.idventa','=','dv.idventa')
-            ->select('v.idventa','v.fecha_hora','p.nombre','v.tipo_comprobante','v.serie_comprobante','v.num_comprobante','v.impuesto','v.estado','v.total_venta')
+            ->select('v.idventa','v.fecha_hora','p.nombre','v.tipo_comprobante','v.serie_comprobante','v.num_comprobante','v.estado','v.total_venta')
             ->where('v.num_comprobante','LIKE','%'.$query.'%')
             ->orderBy('v.idventa','desc')
-            ->groupBy('v.idventa','v.fecha_hora','p.nombre','v.tipo_comprobante','v.serie_comprobante','v.num_comprobante','v.impuesto','v.estado')
+            ->groupBy('v.idventa','v.fecha_hora','p.nombre','v.tipo_comprobante','v.serie_comprobante','v.num_comprobante','v.estado')
             ->paginate(7);
             return view('ventas.venta.index',["ventas"=>$ventas,"searchText"=>$query]);
 
@@ -65,7 +65,7 @@ class VentaController extends Controller
          
          $mytime = Carbon::now('America/Lima');
          $venta->fecha_hora=$mytime->toDateTimeString();
-         $venta->impuesto='18';
+         
          $venta->estado='A';
          $venta->save();
 
@@ -103,7 +103,7 @@ class VentaController extends Controller
      $venta=DB::table('venta as v')
             ->join('persona as p','v.idcliente','=','p.idpersona')
             ->join('detalle_venta as dv','v.idventa','=','dv.idventa')
-            ->select('v.idventa','v.fecha_hora','p.nombre','v.tipo_comprobante','v.serie_comprobante','v.num_comprobante','v.impuesto','v.estado','v.total_venta')
+            ->select('v.idventa','v.fecha_hora','p.nombre','v.tipo_comprobante','v.serie_comprobante','v.num_comprobante','v.estado','v.total_venta')
             ->where('v.idventa','=',$id)
             ->first();
 
