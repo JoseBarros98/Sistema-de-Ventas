@@ -23,11 +23,13 @@ Route::resource('compras/ingreso','IngresoController');
 Route::resource('ventas/venta','VentaController');
 Route::resource('seguridad/usuario','UsuarioController');
 Route::resource('empresas/empresa','EnterpriseController');
+Route::resource('pedidos/tela', 'TelaController');
+Route::resource('pedidos/pedido', 'PedidoController');
 
 
 Auth::routes();
 
 Route::get('/', 'ArticuloController@index');
-
+Route::get('/home', 'ArticuloController@index');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );
 Route::get('/{slug?}', 'HomeController@index');

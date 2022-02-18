@@ -14,8 +14,10 @@
         "laravel/socialite": "^4.3",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^6.0",
+        "nao-pon/flysystem-google-drive": "~1.1",
         "realrashid/sweet-alert": "^3.0",
-        "s-ichikawa/laravel-sendgrid-driver": "^2.1"
+        "s-ichikawa/laravel-sendgrid-driver": "^2.1",
+        "spatie/laravel-backup": "^6.16"
     },
     "require-dev": {
         "facade/ignition": "^1.4",

@@ -98,7 +98,9 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="{{ url('almacen/articulo') }}"><i class="fa fa-circle-o"></i> Artículos</a></li>
+                
                 <li><a href="{{ url('almacen/categoria') }}"><i class="fa fa-circle-o"></i> Categorías</a></li>
+                
               </ul>
             </li>
             
@@ -155,6 +157,8 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="{{ url('pedidos/pedido') }}"><i class="fa fa-circle-o"></i> Pedidos</a></li>
+                <li><a href="{{ url('pedidos/tela') }}"><i class="fa fa-circle-o"></i> Telas</a></li>
+                
               </ul>
             </li>
                         

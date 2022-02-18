@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PedidoSeeder extends Seeder
+class TelaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
