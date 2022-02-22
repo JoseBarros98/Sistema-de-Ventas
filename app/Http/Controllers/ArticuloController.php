@@ -93,7 +93,7 @@ class ArticuloController extends Controller
     {
         $articulo=Articulo::findOrFail($id);
         $articulo->Estado='Inactivo';
-        $articulo->update();
+        $articulo->delete();
         return Redirect::to('almacen/articulo');
     }
 }

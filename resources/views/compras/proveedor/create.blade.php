@@ -66,15 +66,9 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 col-sm-6 col-xs-12">
-                <div class="form-group">
-                     <label for="email">Email</label>
-                     <input type="email" name="email" required value="{{old('email')}}" class="form-control" placeholder="Email...">
-                </div>
-            </div> 
 
 
-            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+            <div class="col-xs-12">
                 <div class="form-group">
                             <button class="btn btn-primary" type="submit">Guardar</button>
                             <button class="btn btn-danger" type="reset">Cancelar</button>

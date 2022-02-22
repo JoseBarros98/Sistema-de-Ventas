@@ -21,7 +21,7 @@
                         </div>
                         <div class="form-group">
                             <label for="descripcion">Descripción</label>
-                            <input type="text" name="color" class="form-control" value="{{$telas->color}}" placeholder="Color ...">
+                            <input type="text" name="color_tela" class="form-control" value="{{$telas->color_tela}}" placeholder="Color ...">
                         </div>
                         <div class="form-group">
                             <button class="btn btn-primary" type="submit">Guardar</button>

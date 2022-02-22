@@ -40,9 +40,8 @@
   <div class="form-group">
    <label>Tipo Comprobante</label>
    <select name="tipo_comprobante" class="form-control">
-    <option value="Boleta">Boleta</option>
+    <option value="Boleta">Nota de Venta</option>
     <option value="Factura">Factura</option>
-    <option value="Ticket">Ticket</option>
    </select>
   </div>
  </div>
@@ -113,7 +112,9 @@
       <th>Subtotal</th>
      </thead>
      <tfoot>
+    
       <th>TOTAL</th>
+      
       <th></th>
       <th></th>
       <th></th>

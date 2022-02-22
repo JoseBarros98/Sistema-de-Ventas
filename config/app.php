@@ -165,6 +165,7 @@ return [
         //Backup Copias de Seguridad
         Spatie\Backup\BackupServiceProvider::class,
         App\Providers\GoogleDriveServiceProvider::class,
+        Milon\Barcode\BarcodeServiceProvider::class,
 
         /*
          * Package Service Providers...

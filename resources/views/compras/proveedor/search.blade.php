@@ -1,4 +1,5 @@
 {!! Form::open(array('url'=>'compras/proveedor','method'=>'GET','autocomplete'=>'off','role'=>'search' )) !!}
+@csrf
 <div class="form-group">
     <div class="input-group">
         <input type="text" class="form-control" name="searchText" placeholder="Buscar..." value="{{$searchText}}">

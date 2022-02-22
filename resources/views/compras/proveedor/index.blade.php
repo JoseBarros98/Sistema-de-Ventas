@@ -16,7 +16,7 @@
                         <th>Tipo Doc.</th>
                         <th>Numero Doc.</th>
                         <th>Telefono</th>
-                        <th>Email</th>
+                        
                         <th>Opciones</th>
                     </thead>
                     @foreach( $personas as $per)
@@ -26,7 +26,7 @@
                         <td>{{ $per->tipo_documento}}</td>
                         <td>{{ $per->num_documento}}</td>
                         <td>{{ $per->telefono}}</td>
-                        <td>{{ $per->email}}</td>
+                        
                         
                         <td>
                             <a href="{{URL::action('ProveedorController@edit',$per->idpersona)}}"><button class="btn btn-info">Editar</button></a>

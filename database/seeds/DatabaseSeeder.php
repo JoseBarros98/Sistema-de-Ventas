@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             NacionalidadSeeder::class,
             CategoriaSeeder::class,
-            TallaSeeder::class,
+            
+            
         ]);
     }
 }

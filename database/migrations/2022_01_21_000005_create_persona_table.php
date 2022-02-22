@@ -29,7 +29,6 @@ class CreatePersonaTable extends Migration
             $table->string('num_documento', 15)->nullable()->default(null);
             $table->string('direccion', 70)->nullable()->default(null);
             $table->string('telefono', 15)->nullable()->default(null);
-            $table->string('email', 250)->nullable()->default(null);
             $table->timestamps();
                 
         });

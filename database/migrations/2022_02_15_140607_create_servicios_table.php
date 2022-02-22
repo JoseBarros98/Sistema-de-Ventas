@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTallasTable extends Migration
+class CreateServiciosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateTallasTable extends Migration
      */
     public function up()
     {
-        Schema::create('tallas', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string("n_talla");
-            $table->integer("cantidad_talla");
+        Schema::create('servicios', function (Blueprint $table) {
+            $table->id();
+            $table->string('detalle_serv')->nullable($value=true);
+            $table->text('descripcion_serv')->nullable($value=false);
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateTallasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tallas');
+        Schema::dropIfExists('servicios');
     }
 }

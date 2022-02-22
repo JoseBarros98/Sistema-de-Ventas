@@ -52,7 +52,7 @@ class TelaController extends Controller
     {
         $tela=new Tela;
         $tela->nombre_tela=$request->get('nombre_tela');
-        $tela->color=$request->get('color');
+        $tela->color_tela=$request->get('color_tela');
     
         $tela->save();
         //return Redirect::to('almacen/categoria');
@@ -78,7 +78,7 @@ class TelaController extends Controller
      */
     public function edit($id)
     {
-        return view("pedidos.tela.edit",["telas"=>Tela::findOrFail($id)]);
+        return view("almacen.tela.edit",["telas"=>Tela::findOrFail($id)]);
     }
 
     /**
@@ -92,7 +92,7 @@ class TelaController extends Controller
     {
         $tela=Tela::findOrFail($id);
         $tela->nombre_tela=$request->get('nombre_tela');
-        $tela->color=$request->get('color');
+        $tela->color_tela=$request->get('color_tela');
         $tela->update();
         return redirect('pedidos/tela');
     }

@@ -16,7 +16,7 @@ class CreateTelasTable extends Migration
         Schema::create('telas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string("nombre_tela");
-            $table->string("color");
+            $table->string("color_tela");
             $table->timestamps();
         });
     }

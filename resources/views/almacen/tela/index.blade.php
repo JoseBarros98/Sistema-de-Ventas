@@ -18,7 +18,7 @@
                     @foreach( $telas as $tel)
                     <tr>
                         <td>{{ $tel->nombre_tela}}</td>
-                        <td>{{ $tel->color}}</td>
+                        <td>{{ $tel->color_tela}}</td>
                         <td>
                             <a href="{{URL::action('TelaController@edit',$tel->id)}}"><button class="btn btn-info">Editar</button></a>
                             <a href="" data-target="#modal-delete-{{$tel->id}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>

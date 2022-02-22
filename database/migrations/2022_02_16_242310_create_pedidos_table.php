@@ -14,36 +14,25 @@ class CreatePedidosTable extends Migration
     public function up()
     {
         Schema::create('pedidos', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
+            $table->string('nombre_pedido');
+            $table->unsignedBigInteger('cod_pedido');
             $table->integer("idcliente")->unsigned();
             $table->datetime('fecha_pedido');
             $table->datetime('fecha_entrega');
-            $table->text('descripcion');
-            $table->unsignedBigInteger("tipo_tela");
-            $table->unsignedBigInteger("talla");
-            $table->integer('cantidad_talla');
-            $table->decimal('total_venta', 11, 2);
-            $table->decimal('debe', 11, 2);
-            $table->decimal('saldo', 11, 2);
+            $table->string('tipo_comprobante',20);
+            $table->string('num_comprobante', 10);
             $table->string('muestra', 50)->nullable()->default(null);
             $table->text('detalle_muestra');
+            
+            
+            
 
             $table->foreign('idcliente')
-                ->references('idpersona')->on('persona')
-                ->onDelete('restrict')
-                ->onUpdate('restrict'); 
-        
-            $table->foreign('tipo_tela')
-                ->references('id')-> on('telas')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-            
-            $table->foreign('talla')
-                ->references('id')-> on('tallas')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-            
-            
+                    ->references('idpersona')->on('persona')
+                    ->onDelete('restrict')
+                    ->onUpdate('restrict'); 
+
             $table->timestamps();
         });
     }

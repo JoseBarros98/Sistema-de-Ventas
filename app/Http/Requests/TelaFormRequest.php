@@ -25,7 +25,7 @@ class TelaFormRequest extends FormRequest
     {
         return [
             'nombre_tela'=>'required|max:50',
-            'color'=>'max:256',
+            'color_tela'=>'required',
         ];
     }
 }

@@ -29,7 +29,7 @@
                         </div>
                         <div class="form-group">
                             <label for="color">Color</label>
-                            <input type="text" name="color" class="form-control" placeholder="Color de tela ...">
+                            <input type="text" name="color_tela" class="form-control" placeholder="Color de tela ...">
                         </div>
                         <div class="form-group">
                             <button class="btn btn-primary" type="submit">Guardar</button>

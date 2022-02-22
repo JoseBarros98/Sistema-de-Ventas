@@ -61,7 +61,7 @@ class ProveedorController extends Controller
         $persona->num_documento=$request->get('num_documento');
         $persona->direccion=$request->get('direccion');
         $persona->telefono=$request->get('telefono');
-        $persona->email=$request->get('request');
+        
         $persona->save();
         return Redirect::to('compras/proveedor');
         return redirect('compras/proveedor')->with('toast_success','Nuevo Proveedor Agregado');
@@ -105,7 +105,7 @@ class ProveedorController extends Controller
         $persona->num_documento=$request->get('num_documento');
         $persona->direccion=$request->get('direccion');
         $persona->telefono=$request->get('telefono');
-        $persona->email=$request->get('email');
+        
 
         $persona->update();
         return Redirect::to('compras/proveedor');
